@@ -1,0 +1,22 @@
+name: 一键部署到测试环境
+
+on:
+  push:
+    branches:
+      - 'feature/**'
+
+# 工作流包含的作业
+jobs:
+  # 作业的唯一标识符
+  say-hello:
+    # 作业的名称
+    name: Say Hello
+
+    # 作业运行的虚拟机环境
+    runs-on: ubuntu-latest
+
+    # 作业包含的步骤
+    steps:
+      # 步骤一：打印 "Hello, world!"
+      - name: Print Greeting
+        run: echo "Hello, world!"
